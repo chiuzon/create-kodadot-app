@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { fileURLToPath } from "url";
 import nodePolyfills from "rollup-plugin-polyfill-node";
 
 const MODE = process.env.NODE_ENV;
@@ -19,6 +20,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
       crypto: "crypto-browserify",
       stream: "stream-browserify",
       assert: "assert",
