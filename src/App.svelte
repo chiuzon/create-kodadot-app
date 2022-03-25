@@ -2,7 +2,7 @@
   import Router from "svelte-spa-router";
   import Routes from "@/constants/routes";
 
-  import Layout from "@components/composed/Layout.svelte";
+  import Layout from "@/components/composed/Layout.svelte";
 </script>
 
 <Layout>
